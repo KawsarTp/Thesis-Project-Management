@@ -58,7 +58,7 @@
                                     <!-- <span>Select Category</span> -->
                                     <select class="js-example-basic-multiple" name="categories[]" multiple="multiple" style="width: 100%" placeholder="jasasasa">
                                       @foreach($category as $category_list)
-                                        <option value="{{$category_list->id}}">{{$category_list->name}}</option>
+                                        <option value="{{$category_list->name}}">{{$category_list->name}}</option>
                                       @endforeach
                                   </select>
                                     

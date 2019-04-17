@@ -63,6 +63,8 @@ Route::get('/blob','GitController@createBlob');
 // Route::get('/git/connect','GitController@gitConnection');
 Route::post('/git/connect','GitController@gitstore');
 
+Route::get('/git/contributor','GitController@gitContributor');
+
 
 
 

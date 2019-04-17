@@ -51,7 +51,7 @@
          $(document).ready(function() {
           $('select[name="category"]').on('change', function() {
             var category = $(this).val();
-
+            
             if(category) {
               $.ajax({
                 url: '/myform/ajax/'+category,
