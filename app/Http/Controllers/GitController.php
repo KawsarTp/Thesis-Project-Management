@@ -110,8 +110,10 @@ class GitController extends Controller
 
   $path = request()->get('path','.');
  try {
+  $contributors = $this->client->api('repo')->contributors($this->user_name, $repo);
+  // dd($contributors);
     $result = $this->client->api('repo')->contents()->show($this->user_name, $repo, $path);
-    return View('frontend.student.finder', ['parent' => dirname($path), 'repo' => $repo, 'items' => $result,'path'=>$path]);
+    return View('frontend.student.finder', ['parent' => dirname($path), 'repo' => $repo, 'items' => $result,'path'=>$path,'contributors'=>$contributors]);
 }catch(\RuntimeException $e) {
       $a = Git::where('user_id',auth()->guard('student')->user()->id)->first();
       return view('frontend.student.gitrepo',compact('a'));
@@ -218,4 +220,6 @@ public function update()
       // dd($a);
       return redirect()->back();
     }
+
+   
 }
