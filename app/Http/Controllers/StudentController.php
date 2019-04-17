@@ -145,7 +145,8 @@ class StudentController extends Controller
     public function myform($id){
       $a = Category::find($id);
       $name= $a->name;
-      $c= Teacher::where('speciality','LIKE','%'.$name.'%')->where('project_max','<',4)->get();
+      $c= Teacher::where('speciality','LIKE','%'.$name.'%')->get();
+
       // dd($c);
       $f= [];
       foreach($c as $e){
