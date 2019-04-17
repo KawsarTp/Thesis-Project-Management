@@ -14,10 +14,14 @@
 
                         <li class="nav-item">
                             @if($git->count() <= 0)
-                            <button onclick="window.location.href = '/git';" class="nav-link btn btn-primary mr-4" disabled>Git Project Repository</button>
+                            <button onclick="window.location.href = '/git';" class="nav-link btn btn-primary mr-2" disabled>Git Project Repository</button>
                             @else
-                            <button onclick="window.location.href = '/git';" class="nav-link btn btn-primary">Git Project Repository</button>
+                            <button onclick="window.location.href = '/git';" class="nav-link btn btn-primary mr-2">Git Project Repository</button>
                             @endif
+                        </li>
+
+                        <li class="nav-item"> 
+                            <button class="nav-link btn btn-danger mr-2">Work On Latex</button>
                         </li>
 
 
